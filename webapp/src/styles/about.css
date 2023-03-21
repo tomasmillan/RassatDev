@@ -1,0 +1,17 @@
+.aContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    flex-direction: column;
+}
+.aTitle {
+    color: #EFD461;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.aDescription {
+    font-size: 1.2rem;
+    padding: 0 2rem;
+    letter-spacing: 1px;
+}

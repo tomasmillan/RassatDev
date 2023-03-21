@@ -1,0 +1,44 @@
+.callToAction{
+    margin-top: 1.5rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: solid 4px rgb(76, 75, 75);
+}
+
+p{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.btnP{
+    background: transparent;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+    background-color: rgb(153, 153, 153);
+    transition: 0.4s all ease-in-out;
+}
+
+.btnP:hover{
+    background-color: rgb(159, 165, 97);
+    transform: scale(1.1);
+    color: white;
+}
+.sTitle {
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+}
+@media only screen and (max-width: 900px) {
+    .callToAction {
+        flex-direction: column;
+        padding: 12px;
+        text-align: center;
+    }
+}

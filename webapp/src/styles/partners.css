@@ -1,0 +1,24 @@
+.pContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.partners {
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: 0.4s all ease linear;
+    width: 150px;
+    gap: 6px;
+    padding-top: 12px;
+}
+.partners:hover {
+    filter: grayscale(0);
+}
+.pTitleH {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+}
