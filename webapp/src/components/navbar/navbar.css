@@ -39,6 +39,9 @@ a:hover{
   color: #c5b20b;
   text-decoration: none;
 }
+.fono {
+  background-color: red;
+}
 
 @media only screen and (max-width: 900px) {
 
@@ -69,9 +72,6 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    clip-path: circle(1000px at 90% -10%);
-    -webkit-clip-path: circle(1000px at 90% -10%);
-    pointer-events: all;
   }
   nav{
     position: fixed;
@@ -93,10 +93,7 @@ a:hover{
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 1.4rem;
-    clip-path: circle(100px at 90% -10%);
-    -webkit-clip-path: circle(100px at 90% -10%);
     transition: all 1s ease-out;
-    pointer-events: none;
   }
   .closeIcon, nav{
     z-index: 2;

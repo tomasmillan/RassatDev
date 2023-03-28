@@ -1,14 +1,14 @@
-const http = require("http");
+const express = require('express');
+const cors = require('cors');
 
-const server = http.createServer((req, res) => {
-    console.log(req.url, req.headers, req.method);
+const app = express();
 
-    res.setHeader('Content-Type', 'text/html');
-    res.write('<html><head><title>My Page</title></head><body>Hello, world!</body></html')
-    res.end();
-});
+app.use(express.json());
+app.use(cors());
 
-const port = 5000;
+app.get('/', (req, res) => {
+    res.send('Welcome to Rassat Server')
+})
 
-server.listen(port);
-
+const port = process.env.PORT || 5000;
+app.listen(port, console.log(`server started on ${port}`));

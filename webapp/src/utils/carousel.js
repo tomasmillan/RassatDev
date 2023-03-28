@@ -1,14 +1,14 @@
 export const slides = [
     {
-        url: "https://rassat.com.ar/images/slide1.jpg",
+        url: "https://rassat.com.ar/images/home3.jpeg",
         id: 1,
     },
     {
-        url: "https://rassat.com.ar/images/slide2.jpg",
+        url: "https://rassat.com.ar/images/home2.jpg",
         id: 2,
     },
     {
-        url: "https://rassat.com.ar/images/slide3.jpg",
+        url: "https://rassat.com.ar/images/home3.jpeg",
         id: 3,
     }
 ]

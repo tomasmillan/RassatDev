@@ -1,7 +1,7 @@
 import React from 'react'
 import './navbar.css'
 import { Link } from 'react-router-dom'
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose, AiFillPhone } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 import { useRef } from 'react';
 
@@ -36,6 +36,10 @@ const Navbar = () => {
           <AiOutlineClose />
         </button>
       </nav>
+      <div className='fono'>
+        <AiFillPhone /> 
+        <span>1132484444</span>
+      </div>
       <button className="menuIcon" onClick={showNavbar}>
           <FaBars />
         </button>

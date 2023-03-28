@@ -3,7 +3,7 @@ import { Carousel } from "../components/Carousel";
 import { Link } from "react-router-dom";
 import "../styles/home.css";
 import Partners from "../components/Partners";
-import Clients from "../components/Clients";
+// import Clients from "../components/Clients";
 import Service from "../components/Service";
 import About from "../components/About";
 
@@ -23,7 +23,7 @@ const Home = () => {
         <About />
         <h1 className="sTitle">servicios</h1>
         <Service />
-        <Clients />
+        {/* <Clients /> */}
         <Partners />
       </div>
     </div>

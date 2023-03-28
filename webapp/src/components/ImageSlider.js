@@ -5,7 +5,7 @@ const slideStyles = {
   height: "100%",
   backgroundSize: "cover",
   backgroundPosition: "center",
-  objectFit: "contain",
+  objectFit: "cover",
 };
 
 const rightArrowStyles = {
