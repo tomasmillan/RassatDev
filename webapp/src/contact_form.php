@@ -8,12 +8,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     define('FORM_ERR', 'Error en el formulario');
     define('EMAIL_ERR','El e-mail ingresado no es valido');
     define('NAME_ERR', 'El nombre es obligatorio');
+    define('PHN_ERR', 'Ingrese un numero correcto');
     define('MSG_ERR', 'Ingrese su consulta');
     define('SUCCESS', 'Su mensaje fue enviado con exito');
     define('SERVER_ERR', 'Error en el servidor');
     
 
-    $email_to = "tomas.millan96@gmail.com";
+    $email_to = "info@rassat.com.ar";
     $email_subject = "Mensaje desde la web";
  
     function died($error) {
@@ -24,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         die();
     }
 
-    if(!isset($_POST['name']) || !isset($_POST['email']) || !isset($_POST['message'])) {
+    if(!isset($_POST['name']) || !isset($_POST['email'])  || !isset($_POST['phone']) || !isset($_POST['message'])) {
         died(array(FORM_ERR)); 
     }
  
@@ -65,6 +66,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email_message .= "Email: ".clean_string($email_from)."\n";
     $email_message .= "Telefono: ".clean_string($phone)."\n";
     $email_message .= "Mensaje: ".clean_string($message)."\n";
+    $contact_form_url = 'https://rassat.com.ar/contact';
  
     // create email headers
     $headers = 'From: '.$email_from."\r\n".
@@ -75,7 +77,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if($isSent) {
         $response = array('status' => 'ok',
-          'message' => SUCCESS . $isSent
+          'message' => SUCCESS, 'redirect' => $contact_form_url  . $isSent
           );
         echo json_encode($response);    
     } else {

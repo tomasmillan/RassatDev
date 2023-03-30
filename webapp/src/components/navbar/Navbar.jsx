@@ -1,7 +1,7 @@
 import React from 'react'
 import './navbar.css'
 import { Link } from 'react-router-dom'
-import { AiOutlineClose, AiFillPhone } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 import { useRef } from 'react';
 
@@ -11,6 +11,8 @@ const Navbar = () => {
     const showNavbar = () => {
       navRef.current.classList.toggle("responsive");
     };
+    const arg = 'https://cdn-icons-png.flaticon.com/128/206/206654.png'
+    const uru = 'https://cdn-icons-png.flaticon.com/128/206/206764.png'
 
   return (
     <header>
@@ -37,8 +39,10 @@ const Navbar = () => {
         </button>
       </nav>
       <div className='fono'>
-        <AiFillPhone /> 
-        <span>1132484444</span>
+        <img src={arg} alt='arg' /> 
+        <span>+54 (011) 7045 8176</span>
+        <img src={uru} alt='arg' /> 
+        <span>+54 (011) 7045 8176</span>
       </div>
       <button className="menuIcon" onClick={showNavbar}>
           <FaBars />

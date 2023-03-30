@@ -1,0 +1,11 @@
+.detailContainer {
+    padding: 0 2rem;
+}
+.detailContainer h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+.detailContainer img {
+    margin: 1rem 0;
+}
