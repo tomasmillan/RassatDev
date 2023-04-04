@@ -39,16 +39,15 @@ const ImageSlider = () => {
     <div>
       <Slider {...settings}>
         {slides.map((slide) => (
-          <img
-            src={slide.img}
-            alt={slide.id}
-            className="cImage"
-            key={slide.id}
-          />
+          <div className="slider-container" key={slide.id}>
+            <img src={slide.img} alt={slide.id} className="cImage" />
+            <div className="slide-text">
+              <h2>{slide.description}</h2>
+            </div>
+          </div>
         ))}
       </Slider>
     </div>
   );
 };
-
 export default ImageSlider;

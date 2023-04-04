@@ -13,3 +13,19 @@
 .ctitle {
     text-transform: uppercase;
 }
+.slider-container {
+    position: relative;
+  }
+  
+.slide-text {
+    position: absolute;
+    bottom: 2px;
+    color: white;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.slide-text h2 {
+    padding: 1rem 18rem;
+    line-height: 2rem;
+    letter-spacing: 3px;
+}
