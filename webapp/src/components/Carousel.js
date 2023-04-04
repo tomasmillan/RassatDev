@@ -1,6 +1,5 @@
 import React from 'react'
 import ImageSlider from './ImageSlider'
-import { slides } from '../utils/carousel'
 export const Carousel = () => {
     
 
@@ -11,7 +10,7 @@ export const Carousel = () => {
     }
   return (
     <div style={styleSlider}>
-        <ImageSlider slides={slides} />
+        <ImageSlider />
     </div>
   )
 }

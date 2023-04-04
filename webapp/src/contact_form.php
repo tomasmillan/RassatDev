@@ -66,7 +66,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email_message .= "Email: ".clean_string($email_from)."\n";
     $email_message .= "Telefono: ".clean_string($phone)."\n";
     $email_message .= "Mensaje: ".clean_string($message)."\n";
-    $contact_form_url = 'https://rassat.com.ar/contact';
+    $contact_form_url = 'https://rassat.com.ar'."\n";
  
     // create email headers
     $headers = 'From: '.$email_from."\r\n".

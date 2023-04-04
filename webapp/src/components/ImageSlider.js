@@ -1,92 +1,52 @@
-import { useState } from "react";
+import Slider from "react-slick";
+import { slides } from "../utils/carousel";
+import {
+  BsFillArrowLeftCircleFill,
+  BsFillArrowRightCircleFill,
+} from "react-icons/bs";
+import "../styles/clients.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const slideStyles = {
-  width: "100%",
-  height: "100%",
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  objectFit: "cover",
-};
-
-const rightArrowStyles = {
-  position: "absolute",
-  top: "50%",
-  transform: "translate(0, -50%)",
-  right: "32px",
-  fontSize: "45px",
-  color: "#fff",
-  zIndex: 1,
-  cursor: "pointer",
-};
-
-const leftArrowStyles = {
-  position: "absolute",
-  top: "50%",
-  transform: "translate(0, -50%)",
-  left: "32px",
-  fontSize: "45px",
-  color: "#fff",
-  zIndex: 1,
-  cursor: "pointer",
-};
-
-const sliderStyles = {
-  position: "relative",
-  height: "100%",
-};
-
-const dotsContainerStyles = {
-  display: "flex",
-  justifyContent: "center",
-};
-
-const dotStyle = {
-  margin: "0 3px",
-  cursor: "pointer",
-  fontSize: "20px",
-};
-
-const ImageSlider = ({ slides }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-  const goToNext = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
-  const slideStylesWidthBackground = {
-    ...slideStyles,
-    backgroundImage: `url(${slides[currentIndex].url})`,
+const ImageSlider = () => {
+  const settings = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    nextArrow: <BsFillArrowRightCircleFill />,
+    prevArrow: <BsFillArrowLeftCircleFill />,
+    dots: true,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div style={sliderStyles}>
-      <div>
-        <div onClick={goToPrevious} style={leftArrowStyles}>
-          ❰
-        </div>
-        <div onClick={goToNext} style={rightArrowStyles}>
-          ❱
-        </div>
-      </div>
-      <div style={slideStylesWidthBackground}></div>
-      <div style={dotsContainerStyles}>
-        {slides.map((slide, slideIndex) => (
-          <div
-            style={dotStyle}
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
-          >
-          </div>
+    <div>
+      <Slider {...settings}>
+        {slides.map((slide) => (
+          <img
+            src={slide.img}
+            alt={slide.id}
+            className="cImage"
+            key={slide.id}
+          />
         ))}
-      </div>
+      </Slider>
     </div>
   );
 };

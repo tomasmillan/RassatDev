@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom'
 import "./form.css";
+import swal from 'sweetalert';
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -8,7 +10,7 @@ const Form = () => {
     phone: "",
     message: "",
   });
-
+  const navigate = useNavigate();
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
@@ -23,6 +25,14 @@ const Form = () => {
     data.append("phone", formData.phone);
     data.append("message", formData.message);
 
+    const resetForm = () => {
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      })
+    }
     fetch("contact_form.php", {
       method: "POST",
       body: data,
@@ -30,15 +40,16 @@ const Form = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.status === "ok") {
-          alert(data.message);
-          window.location.href = data.redirect;
+          swal(data.message ,'gracias', 'success');
+          resetForm();
+          navigate('/contact')
         } else {
-          alert(data.message);
+          swal("Ha habido un error!",'Complete los campos ', "error");
         }
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert("Hubo un error al enviar el formulario.");
+        swal("Hubo un error"," al enviar el formulario.", "error");
       });
   };
 

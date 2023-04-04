@@ -15,9 +15,9 @@ const ServiceDetail = () => {
               <img src={service.img} alt={service.name} />
               <h3>
                 Estamos actualizando la página para darte una mejor atención.
-                Por favor te invitamos a nos dejes un mensaje a través de
+                Por favor te invitamos a que nos dejes un mensaje a través de
                 whatsapp o en la seccion de contacto y un experto te brindará
-                ayudaa la brevedad.
+                ayuda a la brevedad.
               </h3>
             </div>
           ))}

@@ -42,7 +42,7 @@ const Navbar = () => {
         <img src={arg} alt='arg' /> 
         <span>+54 (011) 7045 8176</span>
         <img src={uru} alt='arg' /> 
-        <span>+54 (011) 7045 8176</span>
+        <span>+598 99931761</span>
       </div>
       <button className="menuIcon" onClick={showNavbar}>
           <FaBars />
