@@ -79,7 +79,7 @@ const Form = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Correo electrónico</label>
           <input
             type="email"
             className="form-control"
@@ -89,11 +89,11 @@ const Form = () => {
             onChange={handleChange}
             data-display="e-mail"
             required
-            placeholder="Email"
+            placeholder="Dirección de correo electrónico"
           />
         </div>
         <div className="form-group">
-          <label htmlFor="phone">Telefono</label>
+          <label htmlFor="phone">Teléfono</label>
           <input
             type="tel"
             className="form-control"
@@ -104,7 +104,7 @@ const Form = () => {
             data-display="phone"
             required
             pattern="[0-9]{10}"
-            placeholder="Numero"
+            placeholder="Número"
           />
         </div>
         <div className="form-group">
@@ -117,7 +117,7 @@ const Form = () => {
             onChange={handleChange}
             data-display="Mensaje"
             required
-            placeholder="Mensaje"
+            placeholder="Escriba su mensaje"
           ></textarea>
         </div>
         <button type="submit" id="ccf-send" className="btnForm">

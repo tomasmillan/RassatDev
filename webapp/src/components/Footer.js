@@ -20,18 +20,18 @@ const Footer = () => {
           <Form />
         </div>
         <div className="col-2">
-          <h1 className="title">Informacion</h1>
-          <p className="text">Numero de Telefono</p>
+          <h1 className="title">Información</h1>
+          <p className="text">Número de Teléfono</p>
           <div className="row">
             <AiOutlinePhone className="icon" />
             <p className="s-text">{phoneNumber}</p>
           </div>
-          <p className="text">Email</p>
+          <p className="text">Correo electrónico</p>
           <div className="row">
             <AiOutlineMail className="icon" />
             <p className="s-text">{mail}</p>
           </div>
-          <p className="text">Dirreccion</p>
+          <p className="text">Dirrección</p>
           <div className="row">
             <CiLocationOn className="icon" />
             <p className="s-text">{adress}</p>

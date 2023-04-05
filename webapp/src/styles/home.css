@@ -1,5 +1,5 @@
 .callToAction{
-    margin-top: 1.5rem;
+    margin-top: 8vw;
     margin-left: 6rem;
     margin-right: 6rem;
     padding: 12px 0;
@@ -41,5 +41,6 @@ p{
         text-align: center;
         justify-content: center;
         align-items: center;
+        margin-top: -30vw;
     }
 }
